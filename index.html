@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Covinomics</title>
+  </head>
+  <body>
+    <ul>
+      <li><a class="header" href="#">Covinomics</a></li>
+      <li><a class="nav-items" href="#">Home</a></li>
+      <li><a class="nav-items" href="#">Resources</a></li>
+      <li><a class="nav-items" href="#">Blog</a></li>
+    </ul>
+    <div class="parallax">
+      <h1 class="head">COVID-19</h1>
+    </div>
+    <div class="middle-content">
+      <h2 class="head2">About COVID-19</h2>
+      <p class="p">
+        Coronavirus disease (COVID-19) is an infectious disease caused by the
+        SARS-CoV-2 virus.
+
+        <br /><br />Most people infected with the virus will experience mild to
+        moderate respiratory illness and recover without requiring special
+        treatment. However, some will become seriously ill and require medical
+        attention. Older people and those with underlying medical conditions
+        like cardiovascular disease, diabetes, chronic respiratory disease, or
+        cancer are more likely to develop serious illness. Anyone can get sick
+        with COVID-19 and become seriously ill or die at any age.
+
+        <br /><br />The best way to prevent and slow down transmission is to be
+        well informed about the disease and how the virus spreads. Protect
+        yourself and others from infection by staying at least 1 metre apart
+        from others, wearing a properly fitted mask, and washing your hands or
+        using an alcohol-based rub frequently. Get vaccinated when it’s your
+        turn and follow local guidance.
+
+        <br /><br />The virus can spread from an infected person’s mouth or nose
+        in small liquid particles when they cough, sneeze, speak, sing or
+        breathe. These particles range from larger respiratory droplets to
+        smaller aerosols. It is important to practice respiratory etiquette, for
+        example by coughing into a flexed elbow, and to stay home and
+        self-isolate until you recover if you feel unwell.
+      </p>
+    </div>
+    <div class="bottom">
+      <dl>
+        <dt class="description">
+          <h2 class="head3">About Me</h2>
+          <img src="tanush.png" />
+          <h3 class="head4">I'm Tanush</h3>
+          <h4>A <u>Pro</u> grammer</h4>
+          <p class="p2">
+            My Name is Tanush. I am 13 years old. My hobbies are to play
+            cricket, to study science & maths, to do international colabrations
+            and to do coding.
+          </p>
+          <button class="contact_button">Contact me</button>
+          <h3 id="last_text">Response: </h3>
+        </dt>
+      </dl>
+    </div>
+    <script>
+      function contact_me() {
+        name = prompt("What is your name?");
+        email = prompt("What is your email");
+        collabration = prompt(
+          "What we can do together? i.e. study or code"
+        ).toLowerCase();
+        if (collabration == "study") {
+            document.getElementById("last_text").innerText = "Response: " +
+            "Thanks " +
+              name +
+              "!! I will try to contact you as soon as possible on this email " +
+              email +
+              " to study. Together we can make a reasearch paper also."
+          
+        } else if (collabration == "code") {
+          document.getElementById("last_text").innerText = "Response: " + 
+            "Thanks " +
+              name +
+              "!! I will try to contact you as soon as possible on this email " +
+              email +
+              " to code. Together we can make a cool prject also."
+          
+        } else {
+          alert("Pls try again");
+        }
+      }
+      let contact_button = document.querySelector("button");
+      contact_button.addEventListener("click", contact_me);
+    </script>
+  </body>
+</html>
